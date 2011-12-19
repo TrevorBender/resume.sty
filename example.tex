@@ -1,0 +1,58 @@
+\documentclass[9pt]{article}
+\usepackage{resume}
+
+\begin{document}
+
+% Header {{{1
+\begin{center}
+    \resname{John Doe}
+\end{center}
+    \restitle{Contact Info}
+\begin{resmul_section}
+	Street Address & Phone number\\
+	City, State ZIP & em@il.address\\
+\end{resmul_section}
+%}}}1
+
+\vspace{0.1in}
+
+% Objective {{{1
+\restitle{Objective}
+\begin{res_section}
+Objective
+\end{res_section}
+%}}}1
+
+% Profile {{{1
+\restitle{Profile}
+\begin{res_section}
+Profile
+\end{res_section}
+%}}}1
+
+% Experience {{{1
+\restitle{Experience}
+\begin{resmul_section}
+    {\bf Employer} & City, State\\
+    \emph{Job Title} & Start Date - Current \\
+    \resmul{
+        description of job
+    }
+    \\
+    \resmul{\resbp bullet point of job}
+    \resmul{\resbp second bullet point}
+\end{resmul_section}
+%}}}1
+
+%{{{ Education
+\restitle{Education}
+\begin{resmul_section}
+    \textbf{School} & City, State\\
+    B.S. in \emph{Degree} & Date received\\
+    GPA: GPA &\\
+\end{resmul_section}
+%}}}
+
+\end{document}
+
+% vim: set foldmethod=marker

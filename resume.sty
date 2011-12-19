@@ -1,0 +1,52 @@
+%
+% Resume package
+%
+\ProvidesPackage{resume}
+
+% TODO: Find out how to install fullpage
+%\usepackage{fullpage}
+% until then, use geometry
+\usepackage[top=1in,right=1in,left=1in,bottom=1in]{geometry}
+\textheight=9.5in
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\frenchspacing
+
+% create a new section in the resume
+\newenvironment{res_section}{
+    \begin{center}
+    \begin{tabular}{p{6in}}
+}{
+    \end{tabular}
+    \end{center}
+}
+
+% create a new multicolumn section
+\newenvironment{resmul_section}{
+    \begin{center}
+    \begin{tabular*}{6in}{l@{\extracolsep{\fill}}r}
+}{
+    \end{tabular*}
+    \end{center}
+}
+
+% create a multi-column line
+\newcommand{\resmul}[1] {\multicolumn{2}{p{6in}}{#1}\\}
+
+% use capitals for title
+\newcommand{\restitle}[1] {\large{\textsc{#1}}}
+
+% name
+\newcommand{\resname}[1] {\LARGE{\textsc{#1}}}
+
+% header table
+\newenvironment{res_header}{
+    \begin{tabular*}{6.3in}{l@{\extracolsep{\fill}}r}
+}{
+    \end{tabular*}
+}
+
+% bullet points
+\newcommand{\resbp}[1] {$\bullet$ #1}
